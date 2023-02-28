@@ -12,16 +12,13 @@ import kodlamaio.nortwind.entities.concretes.Product;
 
 @RestController
 @RequestMapping("/api/products")
+
 public class ProductsController {
 
-	
+	@Autowired
 	private ProductService productService;
 	
-	@Autowired
-	public ProductsController(ProductService productService) {
-		super();
-		this.productService = productService;
-	}
+
 
 	@GetMapping("/getall")
 	public List<Product> getAll(){
